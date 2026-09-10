@@ -1,17 +1,11 @@
 {
   "identity": {
     "full_name": "Example Candidate",
-    "english_name": "Example Candidate",
-    "gender": "UNKNOWN",
-    "date_of_birth": "UNKNOWN"
+    "english_name": "Example Candidate"
   },
   "contact": {
     "mobile": "UNKNOWN",
-    "email": "candidate@example.invalid",
-    "current_residence": "Example City",
-    "preferred_locations": [
-      "Example City"
-    ]
+    "email": "candidate@example.invalid"
   },
   "education": [
     {
@@ -42,5 +36,17 @@
     "save_draft": true,
     "submit_application": false,
     "upload_attachments": false
-  }
+  },
+  "demographics": {
+    "gender": "UNKNOWN",
+    "date_of_birth": "UNKNOWN"
+  },
+  "location": {
+    "current_residence": "Example City",
+    "preferred_locations": [
+      "Example City"
+    ]
+  },
+  "emergency_contact": {},
+  "salary": {}
 }

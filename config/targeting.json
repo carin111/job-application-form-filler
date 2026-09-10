@@ -176,14 +176,13 @@
   },
   "default_profile_sections": [
     "identity",
-    "contact",
-    "education",
-    "languages",
-    "tools",
-    "certificates",
-    "awards"
+    "education"
   ],
   "never_default_sections": [
+    "demographics",
+    "location",
+    "emergency_contact",
+    "salary",
     "sensitive_identity",
     "employer_contacts"
   ]

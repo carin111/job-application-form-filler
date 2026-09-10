@@ -2,6 +2,7 @@
 """Maintain a compact local progress record for multi-turn form filling."""
 from __future__ import annotations
 import argparse, json, os
+from urllib.parse import urlparse
 from datetime import datetime, timezone
 from pathlib import Path
 DEFAULT=Path(os.environ.get("JOB_APPLICATION_DATA_DIR",Path.home()/".job-application-form-filler"))
@@ -15,7 +16,10 @@ def main():
     state=json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"key":args.key,"completed_sections":[],"pending_sections":[],"saved":False,"submitted":False}
     for k in ("site","role","language"):
         v=getattr(args,k)
-        if v is not None: state[k]=v
+        if v is not None:
+            if k=="site" and "://" in v:
+                v=urlparse(v).hostname or "unknown-host"
+            state[k]=v
     for x in args.complete:
         if x not in state["completed_sections"]: state["completed_sections"].append(x)
         if x in state["pending_sections"]: state["pending_sections"].remove(x)

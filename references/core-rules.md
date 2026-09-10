@@ -1,6 +1,7 @@
 # Core rules
 
 - Use only verified facts from the generated context or facts supplied in the current conversation.
+- Request only profile sections represented by visible form fields; do not load contact, demographics, location, salary, identity, or referee data preemptively.
 - Never invent dates, metrics, titles, awards, certificates, contacts, tools, responsibilities, official translations, or salary.
 - Preserve the user's strongest detailed wording; shorten only for field limits or an explicit request.
 - Put internships in **实习经历 / Internship Experience**, not **工作经历 / Employment**, unless no internship section exists.
