@@ -1,0 +1,13 @@
+# Local/private applicant data
+references/profile.md
+references/experience-bank.md
+private/
+*.private.md
+*.docx
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+.env
+.env.*

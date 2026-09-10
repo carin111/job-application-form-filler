@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Application Form Filler"
+  short_description: "Use a verified private fact bank to fill and save job applications safely"
+  default_prompt: "Read the target role and application page, select matching facts from my private verified profile and experience bank, preserve detailed descriptions, save the draft, and do not submit or upload attachments."
