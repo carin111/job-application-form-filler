@@ -1,0 +1,190 @@
+{
+  "roles": {
+    "operations": {
+      "aliases": [
+        "operations",
+        "operation",
+        "运营",
+        "ecommerce",
+        "电商",
+        "marketing",
+        "市场",
+        "brand",
+        "品牌"
+      ],
+      "tags": [
+        "operations",
+        "ecommerce",
+        "marketing",
+        "brand",
+        "campaign",
+        "conversion",
+        "supplier",
+        "content",
+        "user-growth",
+        "data"
+      ],
+      "default_max": 3,
+      "default_kinds": [
+        "internship",
+        "employment",
+        "research"
+      ]
+    },
+    "product": {
+      "aliases": [
+        "product",
+        "产品",
+        "产品运营"
+      ],
+      "tags": [
+        "product",
+        "user-feedback",
+        "requirements",
+        "prototype",
+        "iteration",
+        "data",
+        "operations"
+      ],
+      "default_max": 3,
+      "default_kinds": [
+        "internship",
+        "employment",
+        "research"
+      ]
+    },
+    "data": {
+      "aliases": [
+        "data",
+        "analytics",
+        "数据",
+        "数据分析",
+        "商业分析"
+      ],
+      "tags": [
+        "data",
+        "analytics",
+        "sql",
+        "experiment",
+        "dashboard",
+        "research"
+      ],
+      "default_max": 3,
+      "default_kinds": [
+        "internship",
+        "employment",
+        "research"
+      ]
+    },
+    "finance": {
+      "aliases": [
+        "finance",
+        "金融",
+        "bank",
+        "银行",
+        "securities",
+        "证券",
+        "insurance",
+        "保险",
+        "investment",
+        "投资"
+      ],
+      "tags": [
+        "finance",
+        "audit",
+        "securities",
+        "investment-banking",
+        "industry-research",
+        "compliance"
+      ],
+      "default_max": 4,
+      "default_kinds": [
+        "internship",
+        "employment",
+        "research"
+      ]
+    },
+    "consulting": {
+      "aliases": [
+        "consulting",
+        "咨询",
+        "strategy",
+        "战略",
+        "research",
+        "研究",
+        "行研"
+      ],
+      "tags": [
+        "consulting",
+        "strategy",
+        "research",
+        "industry-research",
+        "data",
+        "presentation"
+      ],
+      "default_max": 4,
+      "default_kinds": [
+        "internship",
+        "employment",
+        "research"
+      ]
+    },
+    "state-owned": {
+      "aliases": [
+        "state-owned",
+        "国企",
+        "央企",
+        "综合管理",
+        "经营管理"
+      ],
+      "tags": [
+        "research",
+        "writing",
+        "coordination",
+        "compliance",
+        "leadership",
+        "service",
+        "finance"
+      ],
+      "default_max": 4,
+      "default_kinds": [
+        "internship",
+        "employment",
+        "research",
+        "project"
+      ]
+    },
+    "general": {
+      "aliases": [
+        "general",
+        "通用"
+      ],
+      "tags": [
+        "operations",
+        "product",
+        "data",
+        "finance",
+        "research"
+      ],
+      "default_max": 3,
+      "default_kinds": [
+        "internship",
+        "employment",
+        "research"
+      ]
+    }
+  },
+  "default_profile_sections": [
+    "identity",
+    "contact",
+    "education",
+    "languages",
+    "tools",
+    "certificates",
+    "awards"
+  ],
+  "never_default_sections": [
+    "sensitive_identity",
+    "employer_contacts"
+  ]
+}

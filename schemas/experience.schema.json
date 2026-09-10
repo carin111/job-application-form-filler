@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical experience",
+  "type": "object",
+  "required": [
+    "id",
+    "kind",
+    "organization",
+    "title",
+    "start",
+    "end",
+    "description"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "internship",
+        "employment",
+        "project",
+        "research",
+        "leadership"
+      ]
+    },
+    "organization": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "start": {
+      "type": "string"
+    },
+    "end": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "metrics": {
+      "type": "array"
+    },
+    "do_not_claim": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

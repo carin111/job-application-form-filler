@@ -1,13 +1,21 @@
-# Local/private applicant data
-references/profile.md
-references/experience-bank.md
+# Private applicant data and application state
 private/
-*.private.md
+data/
+*.private.json
+*.private.yaml
+*.private.yml
+application-state*.json
+
+# Resumes and identity artifacts
 *.docx
 *.pdf
 *.png
 *.jpg
 *.jpeg
 *.webp
+
+# Secrets and local runtime files
 .env
 .env.*
+__pycache__/
+*.pyc

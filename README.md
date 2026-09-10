@@ -1,46 +1,57 @@
 # Job Application Form Filler
 
-A privacy-safe, reusable Agent Skill for filling Chinese or English job-application forms from a verified user fact bank.
+A token-efficient, privacy-safe Agent Skill for filling Chinese or English job-application forms from a verified private fact bank.
 
-## What it does
+## Why this version is lightweight
 
-- maps a job description to the most relevant experiences;
-- preserves detailed source descriptions instead of reducing them to generic bullets;
-- keeps internships in the correct section;
-- checks dates, awards, education, languages, and role-specific summaries;
-- saves drafts when authorized while treating final submission and attachment upload as separate actions;
-- leaves unknown fields blank rather than guessing.
+The agent does not read an entire resume database. A small deterministic script selects only the profile sections and experiences needed for the current role. Platform instructions are also loaded on demand.
 
-## Privacy design
+## Public/private separation
 
-This public repository contains **no real applicant data**. The profile and experience files are templates only. Create a private copy and fill it locally. Do not commit completed personal fact banks, resumes, identity documents, contact details, or application screenshots.
-
-## Structure
+This repository contains only workflow rules, schemas, scripts, and fictional examples. Real applicant data belongs outside the repository, by default in:
 
 ```text
-job-application-form-filler/
-├── SKILL.md
-├── INSTALL.md
-├── agents/
-│   └── openai.yaml
-└── references/
-    ├── profile-template.md
-    ├── experience-bank-template.md
-    ├── targeting-rules.md
-    ├── form-playbook.md
-    └── privacy-checklist.md
+~/.job-application-form-filler/
 ```
+
+Never commit completed private files, resumes, screenshots, certificates, identity documents, referral URLs, cookies, or application-state files.
 
 ## Quick start
 
-1. Install the folder in your agent's skills directory.
-2. Copy the two template files to a private location.
-3. Fill them only with facts you can verify.
-4. Ask the agent to use this skill for a target role and to save without submitting.
+```bash
+python scripts/init_private_data.py
+```
 
-Example:
+Edit the generated private JSON files locally, then build a minimal context packet:
 
-> Use the job-application-form-filler skill. Tailor my verified experience bank to this ecommerce operations role, fill the open application form, save the draft, but do not submit or upload attachments.
+```bash
+python scripts/build_context.py --role operations --sections identity,education,skills,awards --max-experiences 3
+```
+
+Use `--list` to inspect experience IDs without loading full descriptions. For a dedicated project section, request projects separately:
+
+```bash
+python scripts/build_context.py --role operations --sections awards --kinds project --max-experiences 2
+```
+
+## Supported role profiles
+
+- operations / ecommerce / marketing / brand
+- product
+- data
+- finance
+- consulting / strategy / research
+- state-owned / comprehensive management
+- general
+
+## Safety defaults
+
+- Never invent missing facts.
+- Keep internships out of employment history when a separate internship section exists.
+- Saving a draft does not authorize submission.
+- Uploading attachments requires explicit authorization.
+
+See [INSTALL.md](INSTALL.md) for Codex, OpenCode, and other agents.
 
 ## License
 

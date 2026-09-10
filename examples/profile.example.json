@@ -1,0 +1,46 @@
+{
+  "identity": {
+    "full_name": "Example Candidate",
+    "english_name": "Example Candidate",
+    "gender": "UNKNOWN",
+    "date_of_birth": "UNKNOWN"
+  },
+  "contact": {
+    "mobile": "UNKNOWN",
+    "email": "candidate@example.invalid",
+    "current_residence": "Example City",
+    "preferred_locations": [
+      "Example City"
+    ]
+  },
+  "education": [
+    {
+      "institution": "Example University",
+      "degree": "Master",
+      "major": "Business Analytics",
+      "start": "2025.09",
+      "end": "2027.07",
+      "gpa": "UNKNOWN",
+      "honors": []
+    }
+  ],
+  "languages": [
+    "English: professional working proficiency"
+  ],
+  "tools": [
+    "Excel",
+    "SQL"
+  ],
+  "certificates": [],
+  "awards": [],
+  "leadership": [],
+  "sensitive_identity": {},
+  "employer_contacts": {},
+  "preferences": {
+    "date_fallback": "none",
+    "description_length": "detailed",
+    "save_draft": true,
+    "submit_application": false,
+    "upload_attachments": false
+  }
+}

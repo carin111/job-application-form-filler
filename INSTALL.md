@@ -1,27 +1,32 @@
 # Installation
 
-This repository follows the common Agent Skills layout: `SKILL.md` is at the repository root and supporting guidance is under `references/`.
+Keep the whole repository together so `SKILL.md`, `scripts/`, `config/`, and `references/` preserve their relative paths.
 
 ## Codex
 
-Copy the entire folder to either:
+Copy or clone the repository to one of:
 
 - `~/.agents/skills/job-application-form-filler/`
 - `~/.codex/skills/job-application-form-filler/`
 
 ## OpenCode and other agents
 
-Copy the entire folder into the product's configured user-level or project-level skills directory. Keep `SKILL.md` at the skill root and preserve the relative paths under `references/`.
+Place the repository in the product's configured user-level or project-level skills directory. If automatic skill discovery is unavailable, explicitly tell the agent to read `SKILL.md`.
 
-If automatic discovery is unavailable, instruct the agent explicitly:
+## Create private data
 
-> Read and follow `job-application-form-filler/SKILL.md`. Use my private verified fact bank, fill the form, save the draft, and do not submit or upload attachments.
+Run:
 
-## Private customization
+```bash
+python scripts/init_private_data.py
+```
 
-Do not edit the public templates with real data inside a public clone. Instead, copy these files to a private, ignored location:
+The default private location is `~/.job-application-form-filler`. Override it with either:
 
-- `references/profile-template.md`
-- `references/experience-bank-template.md`
+```bash
+python scripts/init_private_data.py --data-dir /private/path
+```
 
-Then provide those private files to the agent at runtime.
+or the `JOB_APPLICATION_DATA_DIR` environment variable.
+
+Do not place real applicant data inside a public repository.

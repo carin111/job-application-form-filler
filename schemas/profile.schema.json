@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Private applicant profile",
+  "type": "object",
+  "properties": {
+    "identity": {
+      "type": "object"
+    },
+    "contact": {
+      "type": "object"
+    },
+    "education": {
+      "type": "array"
+    },
+    "languages": {
+      "type": "array"
+    },
+    "tools": {
+      "type": "array"
+    },
+    "certificates": {
+      "type": "array"
+    },
+    "awards": {
+      "type": "array"
+    },
+    "leadership": {
+      "type": "array"
+    },
+    "sensitive_identity": {
+      "type": "object"
+    },
+    "employer_contacts": {
+      "type": "object"
+    },
+    "preferences": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
